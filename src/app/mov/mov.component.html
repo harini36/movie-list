@@ -1,0 +1,36 @@
+<div class="outline">
+    <div class="box">
+        <p>TITLE:
+            <input type="text" [(ngModel)]=movi.name placeholder="Title">
+        </p>
+        <p>YEAR:
+            <input type="text" [(ngModel)]=movi.year placeholder="YYYY">
+        </p>
+        <p>IMAGE:
+            <input type="text" [(ngModel)]=movi.image placeholder="url">
+        </p>
+        <p>RATING:
+            <input type="radio" [(ngModel)]=movi.rating value="1" id="1">
+            <label for="1">1</label>
+            <input type="radio" [(ngModel)]=movi.rating value="2" id="2">
+            <label for="2">2</label>
+            <input type="radio" [(ngModel)]=movi.rating value="3" id="3">
+            <label for="3">3</label>
+            <input type="radio" [(ngModel)]=movi.rating value="4" id="4">
+            <label for="4">4</label>
+            <input type="radio" [(ngModel)]=movi.rating value="5" id="5">
+            <label for="5">5</label>
+        </p>
+        <button (click)="save()">ADD</button>
+
+    </div>
+
+<div class="container space" *ngFor="let movi of mov">
+    <img [src]='poster(movi.image)' alt="">
+    <div class="content">
+        <p>{{movi.name}}</p>
+        <p>{{movi.year}}</p>
+        <p>{{movi.rating}}</p>
+    </div>
+</div>
+</div>

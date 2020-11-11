@@ -1,0 +1,44 @@
+.outline{
+    margin-left: 20px;
+    .box{
+        width:auto;
+        height: 250px;
+        border-color: none;
+        border-radius: 10px;
+        border-style: groove;
+        padding-left: 20px;
+        background-color: rgba(187, 177, 165, 0.678);
+        box-shadow: rgba(187, 177, 165, 0.678);
+    }
+
+
+.container {
+    position: relative;
+    max-width: 800px;
+    
+
+}
+
+.container .content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);  
+    background: rgba(0, 0, 0, 0.5);  
+    color: #f1f1f1 ;  
+    width: 170px;   
+    padding: 20px;
+    
+}
+
+.space {
+    margin: 50px;
+    height: 160px;
+    width: 80px;
+
+}
+button{
+    width: 80px;
+    height: 20px;
+}
+}
+

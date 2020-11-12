@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { $ } from 'protractor';
+import { MovService } from '../service/mov.service';
 import{ Mov} from './movmodule';
 
 @Component({
@@ -10,44 +10,17 @@ import{ Mov} from './movmodule';
 export class MovComponent implements OnInit {
    counter=0
    movi:Mov={
-     name:"",
+     title:"",
      year:0,
      image:"",
      rating:0,
-
-
    }
-   mov:Mov[]=[
-    {
-      name:"god father",
-      year:100,
-      image:'god',
-      rating:1,
- 
- 
-    },
-    {
-      name:"angry bird",
-      year:200,
-      image:'angrymen',
-      rating:1,
- 
- 
-    },
-    {
-      name:"Toy story",
-      year:100,
-      image:'toy',
-      rating:1,
- 
- 
-    },
+   mov:Mov[];
 
-   ]
-
-  constructor() { }
+  constructor(private movservice:MovService) { }
 
   ngOnInit(): void {
+    this.loadmov()
   }
   
   poster(image):string{
@@ -58,5 +31,9 @@ export class MovComponent implements OnInit {
     const tempfilm: Mov = { ...this.movi};
     this.mov.push(tempfilm);
   }  
+
+  loadmov():void{
+    this.mov=this.movservice.getmov();
+  }
 
 }

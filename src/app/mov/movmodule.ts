@@ -1,5 +1,5 @@
 export interface Mov{
-    name:string;
+    title:string;
     year:number;
     image:string;
     rating:number;

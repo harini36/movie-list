@@ -1,7 +1,7 @@
-<div class="outline">
-    <div class="box">
+<div class="outline" >
+   <div class="box" >
         <p>TITLE:
-            <input type="text" [(ngModel)]=movi.name placeholder="Title">
+            <input type="text" [(ngModel)]=movi.title placeholder="Title">
         </p>
         <p>YEAR:
             <input type="text" [(ngModel)]=movi.year placeholder="YYYY">
@@ -22,13 +22,12 @@
             <label for="5">5</label>
         </p>
         <button (click)="save()">ADD</button>
-
+    
     </div>
-
 <div class="container space" *ngFor="let movi of mov">
-    <img [src]='poster(movi.image)' alt="">
+    <img class="image" [src]='poster(movi.image)' alt="">
     <div class="content">
-        <p>{{movi.name}}</p>
+        <p>{{movi.title}}</p>
         <p>{{movi.year}}</p>
         <p>{{movi.rating}}</p>
     </div>

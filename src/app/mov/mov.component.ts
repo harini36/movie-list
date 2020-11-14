@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovService } from '../service/mov.service';
+import { mock } from './mocklist';
 import{ Mov} from './movmodule';
 
 @Component({
@@ -14,8 +15,9 @@ export class MovComponent implements OnInit {
      year:0,
      image:"",
      rating:0,
+     trailer:'',
    }
-   mov:Mov[];
+   mov:Mov[]=mock;
 
   constructor(private movservice:MovService) { }
 
@@ -33,7 +35,7 @@ export class MovComponent implements OnInit {
   }  
 
   loadmov():void{
-    this.mov=this.movservice.getmov();
+    this.mov=this.movservice.getmov()
   }
 
 }

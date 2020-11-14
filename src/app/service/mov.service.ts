@@ -15,7 +15,7 @@ export class MovService {
     return mock;
   }
   getomov(title:string):Mov{
-    return mock.find(Mov=>Mov.title===title)
+    return mock.find(Mov=>Mov.title===title);
   }
 
 }

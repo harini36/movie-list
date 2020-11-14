@@ -3,4 +3,5 @@ export interface Mov{
     year:number;
     image:string;
     rating:number;
+    trailer:string;
 }

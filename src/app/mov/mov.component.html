@@ -1,15 +1,15 @@
-<div class="outline" >
-   <div class="box" >
-        <p>TITLE:
+<div class="outline">
+     <div class="box" >
+        <p class="text">TITLE:
             <input type="text" [(ngModel)]=movi.title placeholder="Title">
         </p>
-        <p>YEAR:
+        <p class="text">YEAR:
             <input type="text" [(ngModel)]=movi.year placeholder="YYYY">
         </p>
-        <p>IMAGE:
+        <p class="text">IMAGE:
             <input type="text" [(ngModel)]=movi.image placeholder="url">
         </p>
-        <p>RATING:
+        <p class="text">RATING:
             <input type="radio" [(ngModel)]=movi.rating value="1" id="1">
             <label for="1">1</label>
             <input type="radio" [(ngModel)]=movi.rating value="2" id="2">
@@ -24,12 +24,14 @@
         <button (click)="save()">ADD</button>
     
     </div>
-<div class="container space" *ngFor="let movi of mov">
-    <img class="image" [src]='poster(movi.image)' alt="">
-    <div class="content">
-        <p>{{movi.title}}</p>
-        <p>{{movi.year}}</p>
-        <p>{{movi.rating}}</p>
+    <div class="container space" *ngFor="let movi of mov">
+        <a routerLink="/mov/{{movi.title}}">
+            <img class="image" [src]='poster(movi.image)' alt="">
+            <div class="content">
+                <p>Title: {{movi.title}}</p>
+                <p>year: {{movi.year}}</p>
+                <p>Rating: {{movi.rating}}</p>
+            </div>
+        </a>
     </div>
-</div>
 </div>

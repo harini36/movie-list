@@ -1,7 +1,8 @@
-<img class="image" [src]='poster(mov.image)' alt="">
+
 <P>Title:{{mov.title}}</P>
 <p>Year:{{mov.year}}</p>
 <p>Rating:{{mov.rating}}</p>
-<p>Trailer:<a href="{{mov.trailer}}" >Click Here</a></p>
+<p>Trailer:</p>
+  <p> <a href="{{mov.trailer}}" ><img class="image" [src]='poster(mov.image)' alt=""></a></p>
 
         

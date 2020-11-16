@@ -6,9 +6,9 @@ import { MovComponent } from './mov/mov.component';
 import { FormsModule } from '@angular/forms';
 import { MovdetailsComponent } from './movdetails/movdetails.component';
 import { HeaderComponent } from './header/header.component';
-
-import{HttpClientModule} from '@angular/common/http';
-
+import { HttpClientModule} from '@angular/common/http';
+import { ListComponent } from './list/list.component';
+import { ListdetailsComponent } from './listdetails/listdetails.component';
 
 
 @NgModule({
@@ -17,6 +17,8 @@ import{HttpClientModule} from '@angular/common/http';
     MovComponent,
     MovdetailsComponent,
     HeaderComponent,
+    ListComponent,
+    ListdetailsComponent,
    
   
   ],
@@ -27,6 +29,7 @@ import{HttpClientModule} from '@angular/common/http';
     HttpClientModule,
   ],
   providers: [],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

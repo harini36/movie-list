@@ -1,0 +1,18 @@
+<button class="buttton" (click)='paginate(-1)'>Prev</button>
+<button class="button" (click)='paginate(1)'>next</button>
+
+<div class="list" *ngFor="let listing of movie">
+    <div class="poster">
+
+        <div class="img-container">
+
+            <a routerLink="/list/{{listing.imdbID}}"> <img [src]='listing.Poster' alt=""></a>
+        </div>
+        <div class="details">
+            <p>{{listing.Title}}</p>
+            <p>{{listing.Year}}</p>
+            <div class="curtain"></div>
+        </div>
+    </div>
+
+</div>
